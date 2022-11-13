@@ -1,0 +1,116 @@
+<header class="header">
+  <div
+    class="header-wrapper"
+    fxLayout="row"
+    fxLayoutAlign="space-evenly center"
+  >
+    <div class="logo">
+      <img src="../../../assets/images/svg/logo.svg" alt="" />
+    </div>
+
+    <ul class="nav" fxLayout="row" fxLayoutAlign="space-between start">
+      <li>
+        <select #film (change)="showClip(film.value)">
+          <option value="">Фильмы 2022</option>
+          <option value="dobuha">Добыча</option>
+          <option value="bystreye_puli">Быстрее пули</option>
+          <option value="neslomlennyy">Несломленный</option>
+        </select>
+      </li>
+      <li>
+        <select class="select" #series (change)="showClip(series.value)">
+          <option value="">Сериалы 2022</option>
+          <option value="dragon">Дом дракона</option>
+          <option value="tor">Тор: Любовь и гром</option>
+        </select>
+      </li>
+      <li>
+        <select class="select" #animation (change)="showClip(animation.value)">
+          <option value="">Мультфильмы</option>
+          <option value="minions">Миньоны 2</option>
+        </select>
+      </li>
+      <li>
+        <select class="select" #top (change)="showClip(top.value)">
+          <option value="">ТОП 250</option>
+          <option value="dragon">Дом дракона</option>
+          <option value="bystreye_puli">Быстрее пули</option>
+        </select>
+      </li>
+      <li>Скоро в кино</li>
+    </ul>
+
+    <div class="user-menu" fxLayout="row" fxLayoutAlign="space-between center">
+      <form class="exp-form" *ngIf="toggleSearch">
+        <input
+          type="text"
+          matInput
+          class="search-autocomplete"
+          placeholder="Поиск..."
+          [formControl]="myControl"
+          [matAutocomplete]="auto"
+        />
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          (optionSelected)="onSelected($event.option)"
+          [displayWith]="displayFn"
+        >
+          <mat-option
+            *ngFor="let option of filteredOptions | async"
+            [value]="option"
+          >
+            {{ option.name }}
+          </mat-option>
+        </mat-autocomplete>
+      </form>
+      <div class="search" (click)="toggleSearch = !toggleSearch">
+        <mat-icon aria-hidden="false" fontIcon="search"></mat-icon>
+      </div>
+      <div class="personal-area">
+        <mat-icon
+          aria-hidden="false"
+          fontIcon="personalArea"
+          (click)="showModal()"
+        ></mat-icon>
+      </div>
+      <div class="language-selection">RU</div>
+    </div>
+  </div>
+
+  <div class="header-content">
+    <ul
+      class="film-menu"
+      fxLayout.lt-sm="column"
+      fxLayout="row"
+      fxLayoutAlign="space-evenly center"
+    >
+      <li>
+        <span class="film-item yellow">IMDb</span
+        ><span class="film-value">9.00</span>
+      </li>
+      <li>
+        <span class="film-item">ПРОДОЛЖИТЕЛЬНОСТЬ</span
+        ><span class="film-value">121 мин.</span>
+      </li>
+      <li>
+        <span class="film-item">СТРАНА:</span
+        ><span class="film-value">США</span>
+      </li>
+      <li>
+        <span class="film-item">ЖАНР:</span>
+        <span class="film-value">ФЭНТЕЗИ, БОЕВИК, ДРАМА, МЕЛОДРАМА</span>
+      </li>
+    </ul>
+
+    <div class="film-summary">
+      <h1 class="film-title">ДОМ ДРАКОНА</h1>
+      <p class="film-description">
+        Члены дома Таргариенов оставляют обреченную Валирию и отправляются на
+        <br />
+        запад, где обнаруживают огромную территорию, населенную враждующими
+        <br />
+        королевствами.
+      </p>
+    </div>
+  </div>
+</header>

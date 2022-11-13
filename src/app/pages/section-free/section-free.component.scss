@@ -1,0 +1,139 @@
+.free {
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 212px;
+  background: #1e1e1f;
+
+  &-title {
+    width: 1043px;
+    height: 67px;
+    margin-bottom: 40px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    color: #f0efef;
+  }
+
+  .film-item {
+    width: 246px;
+    height: 344px;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .view-online {
+    margin-top: 44px;
+  }
+
+  .yellow {
+    width: 41px;
+    height: 24px;
+    background: #f6d838;
+    border-radius: 2px;
+    margin-right: 15px;
+  }
+
+  .scale {
+    width: 32px;
+    height: 17px;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+  .year {
+    width: 31px;
+    height: 16px;
+    margin: 10px 0;
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ffffff;
+  }
+
+  .dates {
+    margin-top: 260px;
+  }
+}
+
+.delimiter {
+  width: 1100px;
+  height: 2px;
+  background: #353535;
+  margin: 20px 0;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+@media (max-width: 1300px) {
+  .free-title {
+    width: 800px;
+    font-size: 40px;
+  }
+  .delimiter {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .free-title {
+    width: 600px;
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 950px) {
+  .free {
+    font-size: 14px;
+    padding: 40px 140px;
+    .film-item {
+      width: 220px;
+      height: 330px;
+      margin: 8px;
+      padding: 15px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .free-title {
+      width: 490px;
+      font-size: 28px;
+    }
+    .free {
+      padding: 40px 80px;
+    }
+  }
+}
+
+@media (max-width: 635px) {
+  .free {
+    font-size: 12px;
+    padding: 40px 30px;
+  }
+  .free-title {
+    width: 410px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .free {
+    font-size: 10px;
+    padding: 20px 10px;
+    .free-title {
+      width: 320px;
+      font-size: 18px;
+    }
+    .film-item {
+      width: 160px;
+      height: 260px;
+      margin: 5px;
+      padding: 10px;
+    }
+  }
+}

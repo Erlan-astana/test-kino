@@ -1,0 +1,28 @@
+@import "~@angular/cdk/overlay-prebuilt.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/SFPRODISPLAYMEDIUM.OTF');
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  color: #ffffff;
+}
+
+.mat-dialog-container {
+  padding: 0px !important;
+  border-radius: 0px !important;
+}

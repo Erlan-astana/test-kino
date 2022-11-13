@@ -1,0 +1,160 @@
+<section class="trend">
+  <h2 class="trend-title">В тренде</h2>
+
+  <div
+    class="trend-categories"
+    fxLayout="row"
+    fxLayout.lt-sm="column"
+    fxLayoutAlign="space-around start"
+  >
+    <span class="All" (click)="setGenre('All')">Все:</span>
+    <span class="Action" (click)="setGenre('Action')">Экшен:</span>
+    <span (click)="setGenre('Fiction')">Фантастика:</span>
+    <span (click)="setGenre('Adventures')">Приключения</span>
+    <span (click)="setGenre('Animation')">Анимация</span>
+    <span (click)="setGenre('Biography')">Биография</span>
+    <span (click)="setGenre('Comedy')">Комедии</span>
+    <span (click)="setGenre('Drama')">Драма</span>
+  </div>
+
+  <div fxLayout="row wrap" fxLayoutAlign="space-evenly start">
+    <div
+      *ngIf="checkGenre(['Action', 'Fiction', 'Drama'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background: 'url(../../../assets/images/svg/dracon.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.55</span></div>
+      <span class="year">2022</span>
+      <h2>Дом дракона (1 сезон)</h2>
+      <button class="view-online" (click)="showClip('dragon')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Adventures', 'Action'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background: 'url(../../../assets/images/svg/dobuha.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.80</span></div>
+      <span class="year">2022</span>
+      <h2>Добыча</h2>
+      <button class="view-online" (click)="showClip('dobuha')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Adventures', 'Comedy'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background:
+          'url(../../../assets/images/svg/bystreye_puli.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">9.00</span></div>
+      <span class="year">2022</span>
+      <h2>Быстрее пули</h2>
+      <button class="view-online" (click)="showClip('bystreye_puli')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Action', 'Fiction', 'Comedy'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background: 'url(../../../assets/images/svg/tor.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">7.30</span></div>
+      <span class="year">2022</span>
+      <h2>Тор: Любовь и гром</h2>
+      <button class="view-online" (click)="showClip('tor')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Drama', 'Action'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background:
+          'url(../../../assets/images/svg/ditya_tmy.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.55</span></div>
+      <span class="year">2022</span>
+      <h2>Дитя тьмы</h2>
+      <button class="view-online" (click)="showClip('ditya_tmy')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Animation', 'Comedy'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background: 'url(../../../assets/images/svg/minions.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.55</span></div>
+      <span class="year">2022</span>
+      <h2>Миньоны 2</h2>
+      <button class="view-online" (click)="showClip('minions')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Biography', 'Action'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background: 'url(../../../assets/images/svg/rubikon.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.55</span></div>
+      <span class="year">2022</span>
+      <h2>Рубикон</h2>
+      <button class="view-online" (click)="showClip('rubikon')">
+        Смотреть онлайн
+      </button>
+    </div>
+
+    <div
+      *ngIf="checkGenre(['Biography', 'Drama'])"
+      class="film-item"
+      fxLayout="column"
+      fxLayoutAlign="end start"
+      [ngStyle]="{
+        background:
+          'url(../../../assets/images/svg/neslomlennyy.svg) 0 0 no-repeat'
+      }"
+    >
+      <div><span class="yellow">IMDb</span><span class="scale">8.55</span></div>
+      <span class="year">2022</span>
+      <h2>Несломленный</h2>
+      <button class="view-online" (click)="showClip('neslomlennyy')">
+        Смотреть онлайн
+      </button>
+    </div>
+  </div>
+</section>

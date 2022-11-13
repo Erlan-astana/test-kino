@@ -1,0 +1,14 @@
+.auth-modal {
+  background-color: white;
+  color: black;
+  width: 600px;
+  height: 500px;
+}
+
+@media (max-width: 750px) {
+  .auth-modal {
+    width: auto;
+    height: auto;
+    padding: 25px;
+  }
+}

@@ -1,0 +1,29 @@
+@media (max-width: 1250px) {
+  video {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1000px) {
+  video {
+    width: 650px;
+  }
+}
+
+@media (max-width: 820px) {
+  video {
+    width: 500px;
+  }
+}
+
+@media (max-width: 625px) {
+    video {
+      width: 350px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    video {
+      width: 220px;
+    }
+  }
